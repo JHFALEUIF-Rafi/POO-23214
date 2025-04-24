@@ -9,6 +9,8 @@ public class GestorAlumnoApp {
     public static void main(String[] args) {
         Alumno objtAlumno=new Alumno("Rafi", 20);
         objtAlumno.imprimirNombre();
-        objtAlumno.comprobarEdad();
+        
+        Alumno objt2Alumno=new Alumno("Chayane",45);
+        objt2Alumno.imprimirNombre();
     }
 }
