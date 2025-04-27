@@ -2,11 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ejercicio1;
+package ejercicio1app;
 import java.util.Scanner;
 
-public class GestorEjercicio1 {
-
+public class GestorEjercicio1App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Respuestas correctas: ");
@@ -27,7 +26,7 @@ public class GestorEjercicio1 {
         System.out.println("\n****PUNTAJES****");
         System.out.println("Respuestas Correctas: " + ca);
         System.out.println("Respuestas Incorrectas: " + ia);
-        System.out.println("Respuestas en Blanco: " + rb);
+        System.out.println("Respuestas en Blanco: " + ea);
         System.out.println(" ");
         System.out.println("Puntaje Final: " + pf);
         
