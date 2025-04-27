@@ -18,19 +18,15 @@ public class GestorPrimerProgramaApp {
         
         //System.out.println("K lo q world");
         
-        /*Scanner sc = new Scanner (System.in);
-        System.out.println("Ingrese nombre: ");
+        Scanner sc = new Scanner (System.in);
+        /*System.out.println("Ingrese nombre: ");
         String nombre = sc.nextLine();
         System.out.println("Hola "+ nombre);*/
         
-        Scanner sc = new Scanner(System.in);
-        
         System.out.println("Ingrese numero 1: ");
-        int num1 = sc.nextInt();
-        
+        int num1 = sc.nextInt();        
         System.out.println("Ingrese numero 2: ");
         int num2 = sc.nextInt();
-        
         int suma=num1+num2;
         System.out.println("La suma de " + num1 + " y " + num2 + " es:  " + suma);
     }
