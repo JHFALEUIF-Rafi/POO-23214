@@ -5,20 +5,39 @@
 package bomberoapp;
 
 public class Bombero {
+
     //Atributos
     private String nombre;
     private String apellido;
     private int edad;
-    
-    public Bombero(String n, String a, int e){
+
+    public Bombero(String n, String a, int e) {
         nombre = n;
         apellido = a;
         edad = e;
     }
-    
-    public void imprimir(){
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Apellidos: " + apellido);
-        System.out.println("Edad: " + edad);
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setNombre(String n) {
+        nombre = n;
+    }
+
+    public void setApellido(String a) {
+        apellido = a;
+    }
+
+    public void setEdad(int e) {
+        edad = e;
     }
 }

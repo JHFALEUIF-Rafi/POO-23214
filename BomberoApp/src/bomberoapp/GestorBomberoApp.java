@@ -7,7 +7,9 @@ package bomberoapp;
 public class GestorBomberoApp {
     public static void main(String[] args) {
         Bombero objtBombero = new Bombero("Javier", "Serrano Vera", 19);
-        objtBombero.imprimir();
+        System.out.println("Nombre: " + objtBombero.getNombre());
+        System.out.println("Apellidos: " + objtBombero.getApellido());
+        System.out.println("Edad: "+objtBombero.getEdad());
     }
     
 }
