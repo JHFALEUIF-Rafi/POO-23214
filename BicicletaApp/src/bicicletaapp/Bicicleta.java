@@ -15,6 +15,11 @@ public class Bicicleta {
         platoActual = pa;
         piñonActual = pña;
     }
+    public Bicicleta(){
+        velocidadActual=0;
+        platoActual=1;
+        piñonActual=1;
+    }
 
     public void acelerar() {
         velocidadActual *= 2;        
@@ -24,11 +29,11 @@ public class Bicicleta {
         velocidadActual /= 2;
     }
 
-    public int cambiarPlato(int plato) {
+    public void cambiarPlato(int plato) {
         platoActual = plato;
     }
 
-    public int cambiarPiñon(int piñon) {
+    public void cambiarPiñon(int piñon) {
         piñonActual = piñon;
     }
     
@@ -50,6 +55,6 @@ public class Bicicleta {
         velocidadActual = velocidadOriginal; // Restaurar valor original
         
         System.out.println("  Plato actual: " + platoActual);
-        System.out.println("  Piñón actual: " + piñonActual); 
+        System.out.println("  Pinion actual: " + piñonActual); 
     }
 }
