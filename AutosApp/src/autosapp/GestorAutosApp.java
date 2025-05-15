@@ -28,6 +28,14 @@ public class GestorAutosApp {
         listAuto.mostrarLista();
         listAuto.definirMayor();
         listAuto.kilometraje("El carro de tu primo");
+        
+        System.out.println("LISTA ORDENADA");
+        listAuto.ordenarAutos();
+        listAuto.mostrarLista();
+        
+        System.out.println("LISTA 2");
+        listAuto.ordenarAutosV2();
+        listAuto.mostrarLista();
     }
 
 }

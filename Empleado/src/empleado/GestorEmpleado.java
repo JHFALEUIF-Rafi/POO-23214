@@ -7,6 +7,7 @@ package empleado;
 public class GestorEmpleado {
 
     public static void main(String[] args) {
+        //Ejercicio 1
         Empleado objtEmp1 = new Empleado("Rafi", "Tilin", 450.22);
         System.out.println("****Resumen****");
         objtEmp1.mostrarSalario();
@@ -18,6 +19,8 @@ public class GestorEmpleado {
         objtEmp2.mostrarSalario();
         objtEmp2.aumentarSalario();
         objtEmp2.mostrarSalario();
+        
+        //Ejercicio 2
         
     }
     

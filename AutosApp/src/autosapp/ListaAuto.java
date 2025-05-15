@@ -5,6 +5,7 @@
 package autosapp;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Iterator;
 
 public class ListaAuto {
@@ -53,5 +54,13 @@ public class ListaAuto {
             }
         }
         return totalKm;
+    }
+    
+    public void ordenarAutos(){
+        Collections.sort(listA);
+    }
+    
+    public void ordenarAutosV2(){
+        Collections.sort(listA, new OrdenarAutoPorKm());
     }
 }

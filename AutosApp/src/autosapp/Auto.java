@@ -4,7 +4,7 @@
  */
 package autosapp;
 
-public class Auto {
+public class Auto implements Comparable <Auto>{
 
     private String modelo;
     private int km;
@@ -39,6 +39,11 @@ public class Auto {
     @Override
     public String toString() {
         return "Auto{" + "modelo=" + modelo + ", km=" + km + '}';
+    }
+
+    @Override
+    public int compareTo(Auto o) {
+        return this.modelo.compareTo(o.getModelo());
     }
 
 }
