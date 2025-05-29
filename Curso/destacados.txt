@@ -1,0 +1,5 @@
+Promedio general: 7.708333333333333
+Estudiantes con nota mayor al promedio:
+----------------------------------------
+Juan Pérez - Promedio: 8.233333333333333
+Carlos Ruiz - Promedio: 9.433333333333334

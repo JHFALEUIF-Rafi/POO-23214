@@ -1,0 +1,54 @@
+In the cyber world, computer users have faced
+certain types of threat such as worms, spyware,
+phishing, viruses, and other malware. Ransomeware
+is an extortion scheme whereby attackers hijack and
+encrypt the victim’s computer files and then demand
+a ransom from the victim for these files in original
+condition. We thereby define ransomware as a piece
+of pernicious software that exploits a user’s computer vulnerabilities to sneak into the victim’s computer and encrypt his or her files; then the attacker
+keeps the files locked unless the victim agrees to
+pay a ransom. In a typical ransomware attack, the
+attacker reaches into a compromised computer by
+seeking the exposed system vulnerabilities. If this
+system was victimized earlier by a worm or Trojan, the attacker can easily enter the weakly configured system. He then searches for various types of
+important files with such extension names as .txt,
+.doc, .rft, .ppt, .chm, .cpp, .asm, .db, .db1, .dbx, .cgi,
+.dsw, .gzip, .zip, .jpg, .key, .mdb, .pgp .pdf. Knowing
+these files are of possible crucial importance to the
+victims, he then encrypts these files, making them
+impossible for the victim or owner to access them.
+Later, the attacker sends the victim an email ransom
+or pop-up window demanding for the encryption
+key that unlocks the frozen files.
+Once the attacker locates these files, there are
+several processing strategies he might implement.
+First, he can compress all the located files into a
+password-protected zip package, then remove the
+original files; second, he can individually encrypt
+each located file and then remove the original files.
+For example, if the original file is “DissertationFinalVersion.doc”, ransomware will create a file such as
+“Encrypted_DissertationFinalVersion.doc” in order
+to label the original file; third, the attacker might
+create a hidden folder and move all the located files
+to this folder, producing a pseudophase to deceive
+the victim. The third strategy, of course, carries the
+slightest damage and is comparatively feasible for
+victim to retrieve all the “lost” files.
+Furthermore, when ransomware attacks successfully take control of an enterprise’s data, the attacker
+encrypts the data using sophisticated algorithm. The
+password to the encryption is only released if ransom is paid to the attackers carrying out the attack.
+The attacker usually notifies the victim by means of
+a striking message (Figure 1), which carries specific
+instructions as to how the victim reacts to retrieve
+the lost files. A text file (Figure 2) or pop-up window message is generally created in the same folder
+where files are encrypted. The text file or message
+box clearly indicates that all the important files are
+already encrypted and informs the victim of specific
+money remittance methods. A ransomware message
+example in the short form could look like this:
+Pay $10.99 via Western Union otherwise you will
+keep getting this screen.
+One file per 30 minutes will be deleted from the
+hard drive. Deleted files will be restored when
+you have paid up and entered the proper unlock
+code.

@@ -1,0 +1,4 @@
+Juan Pérez,8.5,7.0,9.2
+María Gómez,6.0,7.5,8.0
+Carlos Ruiz,9.0,9.5,9.8
+Ana Torres,5.0,6.0,7.0
