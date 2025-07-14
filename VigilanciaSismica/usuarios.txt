@@ -1,0 +1,4 @@
+Admin,admin123
+Tecnico,tecnico123
+Cientifico,cientifico123
+Operador,operador123

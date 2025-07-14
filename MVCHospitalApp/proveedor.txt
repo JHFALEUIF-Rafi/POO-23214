@@ -1,0 +1,5 @@
+Proveedor1%Ecuador%0987654321%15/05/1980
+Proveedor2%Colombia%1234567890%20/10/1975
+Proveedor3%Perú%1122334455%03/12/1990
+Proveedor4%Chile%5566778899%25/08/1985
+Proveedor5%Argentina%9988776655%10/01/1978
