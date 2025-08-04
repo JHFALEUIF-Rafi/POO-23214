@@ -2,6 +2,7 @@ package controlador;
 
 import modelo.Usuario;
 import modelo.UsuarioDAO;
+import org.mindrot.jbcrypt.BCrypt;
 import vista.Login;
 
 public class Autentificador {

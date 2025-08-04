@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package vista;
 
-/**
- *
- * @author WINDOWS
- */
 public class VentanaAdmin extends javax.swing.JFrame {
 
     /**
@@ -26,21 +19,147 @@ public class VentanaAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        btnOperacionTecnico = new javax.swing.JButton();
+        btnOperacionCientifico = new javax.swing.JButton();
+        btnOperacionOperador = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgenes/imagen/logo2.jpg"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(14, 14, 14))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(149, 149, 149)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(150, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 160, 420));
+
+        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
+
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("QUE OPERACION VAS HACER HOY");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(143, 143, 143)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(153, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(21, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 0, 510, -1));
+
+        btnOperacionTecnico.setBackground(new java.awt.Color(255, 0, 0));
+        btnOperacionTecnico.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnOperacionTecnico.setText("OPERACION TECNICO");
+        btnOperacionTecnico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOperacionTecnicoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnOperacionTecnico, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 370, 70));
+
+        btnOperacionCientifico.setBackground(new java.awt.Color(255, 0, 0));
+        btnOperacionCientifico.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnOperacionCientifico.setText("OPERACION CIENTIFICO");
+        btnOperacionCientifico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOperacionCientificoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnOperacionCientifico, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 370, 70));
+
+        btnOperacionOperador.setBackground(new java.awt.Color(255, 0, 0));
+        btnOperacionOperador.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnOperacionOperador.setText("OPERACION OPERADOR");
+        btnOperacionOperador.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOperacionOperadorActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnOperacionOperador, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, 370, 70));
+
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jButton1.setText("Regresar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 390, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 427, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnOperacionTecnicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOperacionTecnicoActionPerformed
+        VentanaTecnico subV2= new VentanaTecnico();
+        this.setVisible(false);
+        subV2.setVisible(true);
+    }//GEN-LAST:event_btnOperacionTecnicoActionPerformed
+
+    private void btnOperacionCientificoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOperacionCientificoActionPerformed
+        VentanaCientifico subV2= new VentanaCientifico();
+        this.setVisible(false);
+        subV2.setVisible(true);
+    }//GEN-LAST:event_btnOperacionCientificoActionPerformed
+
+    private void btnOperacionOperadorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOperacionOperadorActionPerformed
+        VentanaOperador subV2= new VentanaOperador();
+        this.setVisible(false);
+        subV2.setVisible(true);
+    }//GEN-LAST:event_btnOperacionOperadorActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Login vant=new Login();
+        vant.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +197,14 @@ public class VentanaAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnOperacionCientifico;
+    private javax.swing.JButton btnOperacionOperador;
+    private javax.swing.JButton btnOperacionTecnico;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }

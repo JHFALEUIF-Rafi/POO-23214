@@ -12,9 +12,9 @@ public class Volcan {
     public Volcan(String nombre, double VEI) {
         this.nombre = nombre;
         this.VEI = VEI;
-        this.historico = new ArrayList<>(); 
+        this.historico = new ArrayList<>();
     }
-  
+
     public void agregarErupcion(Erupcion erupcion) {
         this.historico.add(erupcion);
     }
@@ -32,14 +32,18 @@ public class Volcan {
     }
 
     public void setVEI(double VEI) {
+        if (VEI < 0 || VEI > 8) {
+            throw new IllegalArgumentException("VEI debe estar entre 0 y 8");
+        }
         this.VEI = VEI;
     }
 
     public List<Erupcion> getHistorico() {
-        return new ArrayList<>(historico); 
+        return new ArrayList<>(historico);
     }
 
     public void setHistorico(List<Erupcion> historico) {
-        this.historico = new ArrayList<>(historico); 
+        this.historico = new ArrayList<>(historico);
     }
+    
 }

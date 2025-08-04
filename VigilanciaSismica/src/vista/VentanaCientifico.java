@@ -26,21 +26,131 @@ public class VentanaCientifico extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        btnMedirMagnitudSismica = new javax.swing.JButton();
+        btnMediriIndiceExplosividadVolcanica = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgenes/imagen/logo2.jpg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(89, 89, 89)
+                .addComponent(jLabel2)
+                .addContainerGap(107, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 150, 330));
+
+        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
+
+        jLabel1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("QUE VAS HACER EL DIA DE HOY");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(103, 103, 103)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(157, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(28, 28, 28)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(32, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 0, 490, 90));
+
+        btnMedirMagnitudSismica.setBackground(new java.awt.Color(255, 0, 0));
+        btnMedirMagnitudSismica.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnMedirMagnitudSismica.setText("MEDIR MAGNITUD SISMICA");
+        btnMedirMagnitudSismica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMedirMagnitudSismicaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnMedirMagnitudSismica, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, 320, 60));
+
+        btnMediriIndiceExplosividadVolcanica.setBackground(new java.awt.Color(255, 0, 0));
+        btnMediriIndiceExplosividadVolcanica.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnMediriIndiceExplosividadVolcanica.setText("MEDIR INDICE DE EXPLOSIVIDAD VOLCANICA");
+        btnMediriIndiceExplosividadVolcanica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMediriIndiceExplosividadVolcanicaActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnMediriIndiceExplosividadVolcanica, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 320, 60));
+
+        jButton1.setBackground(new java.awt.Color(255, 0, 0));
+        jButton1.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jButton1.setText("REGRESAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnMedirMagnitudSismicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMedirMagnitudSismicaActionPerformed
+        // TODO add your handling code here:
+        SubVMedirMagnitudSismica_Cientifico subV= new SubVMedirMagnitudSismica_Cientifico();
+        this.setVisible(false);
+        subV.setVisible(true);
+    }//GEN-LAST:event_btnMedirMagnitudSismicaActionPerformed
+
+    private void btnMediriIndiceExplosividadVolcanicaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMediriIndiceExplosividadVolcanicaActionPerformed
+        SubVMedirIndiceExplosividadVolcanica_Cientifico subV2=new SubVMedirIndiceExplosividadVolcanica_Cientifico();
+        this.setVisible(false);
+        subV2.setVisible(true);
+    }//GEN-LAST:event_btnMediriIndiceExplosividadVolcanicaActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Login vant=new Login();
+        vant.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +188,13 @@ public class VentanaCientifico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnMedirMagnitudSismica;
+    public javax.swing.JButton btnMediriIndiceExplosividadVolcanica;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }

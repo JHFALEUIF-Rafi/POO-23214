@@ -26,21 +26,129 @@ public class VentanaOperador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        btnCalcularOrigenSismico = new javax.swing.JButton();
+        btnCuantificarExplosivodad = new javax.swing.JButton();
+        btnRegresarAlInicio = new javax.swing.JButton();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgenes/imagen/logo2.jpg"))); // NOI18N
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 12, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(85, 85, 85)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 140, 330));
+
+        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        jLabel2.setText("QUE VA HACER EL DIA DE HOY");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(136, 136, 136)
+                .addComponent(jLabel2)
+                .addContainerGap(183, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jLabel2)
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 0, 500, 90));
+
+        btnCalcularOrigenSismico.setBackground(new java.awt.Color(255, 0, 0));
+        btnCalcularOrigenSismico.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnCalcularOrigenSismico.setText("CALCULAR ORIGEN SISMICA");
+        btnCalcularOrigenSismico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCalcularOrigenSismicoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnCalcularOrigenSismico, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 280, 70));
+
+        btnCuantificarExplosivodad.setBackground(new java.awt.Color(255, 0, 0));
+        btnCuantificarExplosivodad.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnCuantificarExplosivodad.setText("CUANTIFICAR EXPLOSIVIDAD");
+        btnCuantificarExplosivodad.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCuantificarExplosivodadActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnCuantificarExplosivodad, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 280, 70));
+
+        btnRegresarAlInicio.setBackground(new java.awt.Color(255, 0, 0));
+        btnRegresarAlInicio.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
+        btnRegresarAlInicio.setText("Regresar");
+        btnRegresarAlInicio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarAlInicioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnRegresarAlInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 100, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 641, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnCalcularOrigenSismicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCalcularOrigenSismicoActionPerformed
+        sub_CalcularOrigenSismica_Operador subV= new sub_CalcularOrigenSismica_Operador();
+        this.setVisible(false);
+        subV.setVisible(true);
+        
+    }//GEN-LAST:event_btnCalcularOrigenSismicoActionPerformed
+
+    private void btnCuantificarExplosivodadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCuantificarExplosivodadActionPerformed
+       sub_CuantificarExplosividad_Operador subV2= new sub_CuantificarExplosividad_Operador();
+        this.setVisible(false);
+        subV2.setVisible(true);
+    }//GEN-LAST:event_btnCuantificarExplosivodadActionPerformed
+
+    private void btnRegresarAlInicioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarAlInicioActionPerformed
+        Login vant=new Login();
+        vant.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnRegresarAlInicioActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +186,13 @@ public class VentanaOperador extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCalcularOrigenSismico;
+    private javax.swing.JButton btnCuantificarExplosivodad;
+    private javax.swing.JButton btnRegresarAlInicio;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }

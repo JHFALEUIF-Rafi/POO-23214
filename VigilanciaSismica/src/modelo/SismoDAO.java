@@ -1,71 +1,114 @@
 package modelo;
 
-import com.mongodb.BasicDBObject;
-import com.mongodb.DB;
-import com.mongodb.DBCollection;
-import com.mongodb.DBCursor;
-import com.mongodb.DBObject;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoException;
-import java.util.ArrayList;
-import java.util.List;
+import com.mongodb.*;
+import java.util.*;
 
 public class SismoDAO {
+
     private final DBCollection coleccion;
 
     public SismoDAO() {
-        try {
-            MongoClient mongo = Conexion.getInstancia();
-            DB db = mongo.getDB("sistema_sismico");
-            this.coleccion = db.getCollection("sismos");
-        } catch (MongoException e) {
-            throw new RuntimeException("Error al conectar con MongoDB: " + e.getMessage(), e);
-        }
+        this.coleccion = Conexion.getInstancia()
+                .getDB("sistema_sismico")
+                .getCollection("sismos");
     }
 
     public void guardarSismo(Sismo sismo) {
-        try {
-            BasicDBObject doc = sismo.toDBObject();
-            coleccion.insert(doc);
-        } catch (MongoException e) {
-            throw new RuntimeException("Error al guardar el sismo: " + e.getMessage(), e);
-        }
+        BasicDBObject doc = new BasicDBObject()
+                .append("id", sismo.getId())
+                .append("magnitud", sismo.getMagnitud())
+                .append("epicentro", new BasicDBObject()
+                        .append("latitud", sismo.getEpicentro().getLatitud())
+                        .append("longitud", sismo.getEpicentro().getLongitud()))
+                .append("fecha", sismo.getFecha())
+                .append("estaciones", sismo.getEstaciones())
+                .append("medido", false); // Por defecto no medido
+
+        coleccion.insert(doc);
+    }
+
+    public void marcarSismoComoMedido(String idSismo) {
+        BasicDBObject query = new BasicDBObject("id", idSismo);
+        BasicDBObject update = new BasicDBObject("$set",
+                new BasicDBObject("medido", true));
+
+        coleccion.update(query, update);
     }
 
     public List<Sismo> listarSismosNoProcesados() {
         List<Sismo> sismos = new ArrayList<>();
-        try {
-            BasicDBObject query = new BasicDBObject("medido", false);
-            DBCursor cursor = coleccion.find(query);
+        DBCursor cursor = coleccion.find(new BasicDBObject("medido", false));
 
-            while (cursor.hasNext()) {
-                DBObject doc = cursor.next();
-                sismos.add(Sismo.fromDBObject((BasicDBObject) doc));
-            }
-        } catch (MongoException e) {
-            throw new RuntimeException("Error al listar sismos: " + e.getMessage(), e);
+        while (cursor.hasNext()) {
+            DBObject doc = cursor.next();
+            sismos.add(new Sismo(
+                    doc.get("id").toString(),
+                    (double) doc.get("magnitud"),
+                    new Coordenada(
+                            ((BasicDBObject) doc.get("epicentro")).getDouble("latitud"),
+                            ((BasicDBObject) doc.get("epicentro")).getDouble("longitud")
+                    ),
+                    (Date) doc.get("fecha"),
+                    (List<String>) doc.get("estaciones")
+            ));
         }
         return sismos;
     }
 
-    public void marcarSismoComoMedido(String idSismo) {
+    public void marcarComoMedido(String idSismo) {
         try {
-            BasicDBObject query = new BasicDBObject("id", idSismo);
-            BasicDBObject update = new BasicDBObject("$set", new BasicDBObject("medido", true));
-            coleccion.update(query, update);
+            DBObject query = new BasicDBObject("id", idSismo);
+            DBObject update = new BasicDBObject("$set", new BasicDBObject("medido", true));
+
+            coleccion.update(query, update, false, false); // Aquí 'coleccion' debe estar bien definido en tu clase
+
         } catch (MongoException e) {
-            throw new RuntimeException("Error al actualizar el sismo: " + e.getMessage(), e);
+            throw new RuntimeException("Error al marcar el sismo como medido: " + e.getMessage());
         }
     }
 
-    // Método adicional para buscar por ID (útil para validaciones)
-    public Sismo buscarPorId(String idSismo) {
+    public void marcarSismoComoCritico(String idSismo) {
+        DBObject query = new BasicDBObject("id", idSismo);
+        DBObject update = new BasicDBObject("$set", new BasicDBObject("critico", true));
+        coleccion.update(query, update, false, false);
+    }
+
+    public Sismo buscarPorId(String id) {
         try {
-            BasicDBObject query = new BasicDBObject("id", idSismo);
+            DBObject query = new BasicDBObject("id", id);
             DBObject doc = coleccion.findOne(query);
-            return (doc != null) ? Sismo.fromDBObject((BasicDBObject) doc) : null;
+
+            if (doc == null) {
+                return null;
+            }
+
+            return new Sismo(
+                    doc.get("id").toString(),
+                    (double) doc.get("magnitud"),
+                    new Coordenada(
+                            ((BasicDBObject) doc.get("epicentro")).getDouble("latitud"),
+                            ((BasicDBObject) doc.get("epicentro")).getDouble("longitud")
+                    ),
+                    (Date) doc.get("fecha"),
+                    (List<String>) doc.get("estaciones")
+            );
         } catch (MongoException e) {
-            throw new RuntimeException("Error al buscar sismo: " + e.getMessage(), e);
+            System.err.println("Error en buscarPorId: " + e.getMessage());
+            return null;
         }
     }
+
+    public void marcarComoReportado(String idSismo) {
+        try {
+            DBObject query = new BasicDBObject("id", idSismo);
+            DBObject update = new BasicDBObject("$set",
+                    new BasicDBObject("reportado", true) // Nuevo campo
+            );
+            coleccion.update(query, update, false, false);
+        } catch (MongoException e) {
+            System.err.println("Error en marcarComoReportado: " + e.getMessage());
+        }
+    }
+    
+    
 }

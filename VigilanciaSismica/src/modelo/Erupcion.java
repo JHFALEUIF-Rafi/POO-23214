@@ -1,25 +1,43 @@
 package modelo;
 
 import java.util.Date;
+import java.util.List;
 
-public class Erupcion {
-
-    private Date fecha;
+public class Erupcion extends Evento {  // Ahora hereda de Evento
     private double VEI;
     private String descripcion;
+    private String nombreVolcan;
+    private double volumenTefra;
+    private double alturaColumna;
+    private String tipoErupcion;  // Ej: "Pliniana", "Estromboliana", etc.
 
-    public Erupcion(Date fecha, double VEI, String descripcion) {
-        this.fecha = fecha;
-        this.VEI = VEI;
+    public Erupcion(String id, Date fecha, List<String> estaciones,
+                   String nombreVolcan, double volumenTefra, 
+                   double alturaColumna, String descripcion) {
+        super(id, fecha, estaciones);
+        this.nombreVolcan = nombreVolcan;
+        this.volumenTefra = volumenTefra;
+        this.alturaColumna = alturaColumna;
         this.descripcion = descripcion;
+        this.VEI = calcularVEI();  // Auto-cálculo al crear
     }
 
-    public Date getFecha() {
-        return fecha;
+    private double calcularVEI() {
+        // Fórmula según tu documento (ajusta esto):
+        return Math.log10(volumenTefra + 1) * 2.5 + (alturaColumna / 15);
     }
-
-    public void setFecha(Date fecha) {
-        this.fecha = fecha;
+    
+    public String getTipo() {
+        return "ERUPCION_VOLCANICA";
+    }
+    
+  
+    public String getNombreVolcan() {
+        return nombreVolcan;
+    }
+    
+    public String getTipoErupcion() {
+        return tipoErupcion;
     }
 
     public double getVEI() {
@@ -37,5 +55,22 @@ public class Erupcion {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
+
+    public double getVolumenTefra() {
+        return volumenTefra;
+    }
+
+    public void setVolumenTefra(double volumenTefra) {
+        this.volumenTefra = volumenTefra;
+    }
+
+    public double getAlturaColumna() {
+        return alturaColumna;
+    }
+
+    public void setAlturaColumna(double alturaColumna) {
+        this.alturaColumna = alturaColumna;
+    }
+    
     
 }
